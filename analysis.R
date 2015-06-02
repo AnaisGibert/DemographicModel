@@ -36,7 +36,7 @@ dev.off()
 ## Parameters (mean, sd and se)
 param
 
-## ALL the Matrix (sd and mean) used in ULM
+## ALL the Matrix (sd and mean) used in ULM softward
 matrixNSC 
 matrixNSCsd 
 matrixNSF
@@ -52,7 +52,10 @@ pdf("output/Fig4.pdf",height=5, width=10)
 Figure_4(data_simu_TA, data_simu_TS)
 dev.off()
 
-## Figure Appendice
-pdf("output/FigA1.pdf",height=5, width=10)
+## Appendix 1 Figure A1: from illustrator 
+
+## Appendix 2 Figure A2:
+pdf("output/FigA2.pdf",height=5, width=10)
 Figure_Appendice(data_simu)
 dev.off()
+

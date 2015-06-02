@@ -20,18 +20,21 @@ Running the code
 Here we present the data and the code to perform the meta-analyses and all the figures from the paper. Once you have the required packages installed, run this command:
 
 source("analysis.R")
-Figures will be output to a directory output.
-All the data fused in the analyses and included as supplementary material with the paper.
+Figures and tables will be output to a directory output.
+All the data used in the analyses and included as supplementary material with the paper.
 
 List of files available and explanation
 
+data directory containing all the data used in analysis
 data/md.csv: raw data, needed to run the analyses
 data/md_simu: raw data from ULM simulations
+data/ULM.files containing script to run models in ULM (Unified Life Model) software (see Ferrière et al 1996, Legendre and Clobert 1995)
+
 R directory containing functions used in analysis
-R/data.processing: main script to clean the dataset, calculate the parameter, and create the matrices used in ULM
+R/data.processing: main script to clean the dataset, calculate the parameters, and create the matrices used in ULM
 R/statistical_test.R: main script to run all the tests used in the ms
 R/plots. R: main script to run all the plots
-ULM directory containing files used in ULM (Unified Life Model) software (see Ferrière et al 1996, Legendre and Clobert 1995)
+
 analysis.R: main script to run the analyses and generate all the figures.
 
 
