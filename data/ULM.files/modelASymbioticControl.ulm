@@ -1,0 +1,43 @@
+{ time step = 1 year 
+ 
+{ non endophyted plants (m) 
+
+defmod endom(4) 
+mat : a 
+vec : v 
+ 
+defvec v(4) 
+n1, n2, n3, n4
+ 
+defmat a(4) 
+    0,     0,    0,  fgp
+ gj1p,     0,    0,    0
+    0,  gj2p,    0,    0
+    0,  ga1p, ga2p,  sap
+
+defvar n1 = 1 
+ 
+defvar n2 = 1 
+ 
+defvar n3 = 1 
+ 
+defvar n4 = 1 
+ 
+defvar n = n1 + n2 + n3 + n4
+ 
+{ fertility = fecondity*proba flowering
+defvar fgp = gaussf(39.732,167.0767)
+
+ 
+defvar gj1p = beta1f(0.849,0.128)
+ 
+defvar gj2p= beta1f(0.639, 0.74)
+ 
+defvar ga1p = beta1f(0.056,0.0399)
+ 
+defvar ga2p = beta1f(0.695,0.35)
+
+defvar sap = 0.95 
+ 
+ 
+ 

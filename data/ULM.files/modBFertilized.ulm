@@ -1,0 +1,90 @@
+{ time step = 1 year 
+ 
+{ non endophyted + endophyted (m + p) 
+
+defmod endo(8) 
+mat : a 
+vec : v 
+ 
+defvec v(8) 
+n1, n2, n3, n4, m1, m2, m3, m4
+ 
+defmat a(8) 
+           0,     0,    0,     fgp*ta,    0,    0,     0,          0
+     gj1p*ts,     0,    0,          0,    0,    0,     0,          0
+           0,  gj2p,    0,          0,    0,    0,     0,          0
+           0,  ga1p, ga2p,        sap,    0,    0,     0,       0
+           0,     0,    0, fgp*(1-ta),    0,    0,     0,        fgm
+ gj1p*(1-ts),     0,    0,          0, gj1m,    0,     0,          0
+           0,     0,    0,          0,    0,  gj2m,    0,          0
+           0,     0,    0,          0,    0,  ga1m, ga2m,  sam
+
+defvar n1 = 1 
+ 
+defvar n2 = 1 
+ 
+defvar n3 = 1 
+ 
+defvar n4 = 1 
+
+defvar n = n1 + n2 + n3 + n4
+
+defvar m1 = 1 
+ 
+defvar m2 = 1 
+ 
+defvar m3 = 1 
+ 
+defvar m4 = 1 
+ 
+defvar m = m1 + m2 + m3 + m4
+
+defvar ntot = n + m
+
+defvar frep = n/ntot
+
+defvar frem = m/ntot
+
+{ fertility  
+defvar fgp = gaussf(62.6,272.49) 
+ 
+defvar gj1p= beta1f(0.97,0.039) 
+  
+defvar gj2p = beta1f(0.896, 0.913) 
+  
+defvar ga1p = beta1f(0.094,0.0772) 
+  
+defvar ga2p = beta1f(0.989,0.032) 
+ 
+defvar sap = 0.95 
+
+ 
+{ fertility   
+defvar fgm = gaussf(25.155,176.5) 
+  
+{ s = 0.162 
+defvar gj1m = beta1f(0.95,0.047) 
+  
+{ s = 0.71 
+defvar gj2m = beta1f(0.81, 0.877) 
+  
+{ s = 0.059 
+defvar ga1m = beta1f(0.097,0.0449) 
+  
+{ s = 0.435 
+defvar ga2m = beta1f(0.90,0.162) 
+ 
+defvar sam = 0.95 
+
+{ transmission rate adults -> seedlings
+defvar ta = beta1f(0.52,0.094)
+{defvar ta = 1
+
+{ transmission rate seedlings -> juvenile1
+defvar ts = beta1f(0.82,0.154)
+{defvar ts = 1
+
+
+ 
+ 
+ 
